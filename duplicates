@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<string.h>
+string duplicate(char str[])
+{
+	int table[256]={0};
+	int index1=0,index2=0;
+	char temp;
+	while(str[index1])
+	{
+		temp=str[index1];
+		if(table[temp]==0);
+		{
+		table[temp]=1;
+		str[index2]=str[index1];
+		index2++;
+		}
+		index1++;
+	}
+	str[index2]='\0';
+}
+int main()
+{
+	char str[]="removeelements";
+	printf("Before =%s\n",str);
+	duplicate(str);
+	printf("after =%s",str);
+	return 0;
+}
